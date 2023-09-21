@@ -1,0 +1,316 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+
+.menu-bar{
+	/*display:flex;
+	*/top: 0px;
+	margin: 0px;
+	padding: 0px;
+	background:#326051;
+	text-align:center;
+	position: relative;
+    height: 40px;
+
+}
+.menu-bar ul 
+{
+
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+
+
+}
+
+.menu-bar ul li{
+	width: 120px;
+	margin: 15px;
+	padding: 15px;
+
+}
+.menu-bar ul li a{
+text-decoration: none;
+color:#fff;
+
+}
+.active, .menu-bar ul li:hover
+{
+	background: #416e60 ;
+	border-radius: 3px;
+}
+.sub-menu-tracking{
+	display:none;
+
+	
+}
+.sub-menu-tracking ul li:hover
+{
+	background: #08412F ;
+	border-radius:3px;
+}
+
+.menu-bar ul li:hover .sub-menu-tracking
+{
+	
+	z-index: 3;
+	display: block;
+	position: absolute;
+	background: #33FFBD;
+	margin-top: 15px;
+	margin-left: -15px;
+
+}
+.menu-bar ul li:hover .sub-menu-tracking ul{
+	display: block;
+	margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-tracking ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0px;
+	text-align: left;
+
+
+}
+.sub-menu-buyersection{
+	display:none;
+
+	
+}
+
+.menu-bar ul li:hover .sub-menu-buyersection
+{
+
+	z-index: 3;
+	display: block;
+	position: absolute;
+	background: #33FFBD;
+	margin-top: 15px;
+	margin-left: -15px;
+
+}
+.menu-bar ul li:hover .sub-menu-buyersection ul{
+	display: block;
+	margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-buyersection ul li{
+	
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0px;
+	text-align: left;
+
+
+}
+
+.sub-menu-contact-us{
+	display:none;
+
+	
+}
+
+.menu-bar ul li:hover .sub-menu-contact-us
+{
+	z-index: 3;
+	display: block;
+	position: absolute;
+	background: #33FFBD;
+	margin-top: 15px;
+	margin-left: -15px;
+
+}
+.menu-bar ul li:hover .sub-menu-contact-us ul{
+	display: block;
+	margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-contact-us ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0px;
+	text-align: left;
+
+
+}
+
+</style>
+<body>
+    <h1>
+        Omi 
+    </h1>
+    <div 
+class="menu-bar">
+		<ul>
+		<li id="logo"><img src="logo.jpeg"></li> 
+		<li class="active"><a href="#">HOME</a></li>
+
+		<li><a href="#">TRACKING</a>
+			<div class="sub-menu-tracking">
+				<ul>
+					<li><a href="#">SCHOOL EMBLEM</a></li>
+					<li ><a href="#">OUR VISION</a></li>
+					<li ><a href="#">THE VALUES WE CHERIS</a></li>
+					<li ><a href="#">ADVISORY BOARD</a></li>
+					<li ><a href="#">MESSAGE FROM THE CHAIRMAN</a></li>
+					<li ><a href="#">MESSAGE FOR THE PRINCIPAL</a></li>
+				</ul>	
+				
+			</div>
+		</li>
+
+		<li><a href="#">MARKET</a>
+			<div class="sub-menu-buyersection">
+				<ul>
+					<li><a href="#">BUY SECTION</a> </li>
+					<li><a href="#"></a>SELLER SECTION </li>
+					<li><a href="#">APPLY ONLINE</a> </li>
+				</ul>
+			</div>
+		</li>
+
+		<li><a href="#">CONTACT US</a>
+			<div class="sub-menu-contact-us">
+				<ul>
+					<li><a href="#">OUR WEBSITE</a> </li>
+					<li><a href="#">CONTACT ON WHATSAPP</a> </li>
+					<li><a href="#">MAIL US</a> </li>
+					<li><a href="#">OUR LOCATION</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	</div>
+    
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.menu-bar {
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: #326051;
+    text-align: center;
+    position: relative;
+    height: 70px; /* Adjust the menu bar's height here */
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #416e60;
+    border-radius: 3px;
+}
+
+.sub-menu-tracking {
+    display: none;
+}
+
+.sub-menu-buyersection {
+    display: none;
+}
+
+.sub-menu-contact-us {
+    display: none;
+}
+.login-button,
+.signup-button {
+    position: absolute;
+    right: 10px;
+}
+
+/* Style the Login and Sign Up buttons */
+.login-button a,
+.signup-button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+
+.login-button a:hover,
+.signup-button a:hover {
+    background: #416e60;
+}
+
+</style>
+<body>
+    <h1>Omi</h1>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">TRACKING</a>
+                <div class="sub-menu-tracking">
+                    <ul>
+                        <li><a href="#">SCHOOL EMBLEM</a></li>
+                        <li><a href="#">OUR VISION</a></li>
+                        <li><a href="#">THE VALUES WE CHERIS</a></li>
+                        <li><a href="#">ADVISORY BOARD</a></li>
+                        <li><a href="#">MESSAGE FROM THE CHAIRMAN</a></li>
+                        <li><a href="#">MESSAGE FOR THE PRINCIPAL</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">MARKET</a>
+                <div class="sub-menu-buyersection">
+                    <ul>
+                        <li><a href="#">BUY SECTION</a></li>
+                        <li><a href="#">SELLER SECTION</a></li>
+                        <li><a href="#">APPLY ONLINE</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">CONTACT US</a>
+                <div class="sub-menu-contact-us">
+                    <ul>
+                        <li><a href="#">OUR WEBSITE</a></li>
+                        <li><a href="#">CONTACT ON WHATSAPP</a></li>
+                        <li><a href="#">MAIL US</a></li>
+                        <li><a href="#">OUR LOCATION</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- Add Login and Sign Up links here -->
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">SIGN UP</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool Training Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wool Training Information</h1>
+
+        <div class="section">
+            <h2>What is Wool?</h2>
+            <p>Wool is a natural fiber obtained from the fleece of sheep and other animals like goats (cashmere and mohair), rabbits (angora), and even camels. It is known for its warmth, softness, and versatility. Wool fibers have unique properties that make them highly desirable in various industries, including textiles and fashion.</p>
+        </div>
+
+        <div class="section">
+            <h2>Benefits of Wool</h2>
+            <p>Wool has several advantages, including:</p>
+            <ul>
+                <li>Excellent insulation, keeping you warm in cold weather.</li>
+                <li>Natural moisture-wicking properties, keeping you dry and comfortable.</li>
+                <li>Fire-resistant qualities, making it a safe choice for clothing.</li>
+                <li>Durability and resistance to wrinkles and odors.</li>
+                <li>Biodegradability, making it an eco-friendly choice.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Uses of Wool</h2>
+            <p>Wool is used for various purposes, including:</p>
+            <ul>
+                <li>Clothing and apparel, such as sweaters, suits, and socks.</li>
+                <li>Blankets and bedding for warmth and comfort.</li>
+                <li>Carpeting and rugs for their durability and insulation properties.</li>
+                <li>Felt production for hats and industrial applications.</li>
+                <li>Art and crafts, like knitting and felting projects.</li>
+                <li>Soundproofing in architectural applications.</li>
+                <li>Woolen yarn for knitting and crocheting enthusiasts.</li>
+                <li>Insulating material in the automotive industry.</li>
+            </ul>
+        </div>
+        
+        <button id="toggleSections">Toggle Sections</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("toggleSections");
+            const sections = document.querySelectorAll(".section");
+
+            let isHidden = false;
+
+            toggleButton.addEventListener("click", function () {
+                if (isHidden) {
+                    sections.forEach((section) => {
+                        section.style.display = "block";
+                    });
+                } else {
+                    sections.forEach((section) => {
+                        section.style.display = "none";
+                    });
+                }
+
+                isHidden = !isHidden;
+            });
+        });
+    </script>
+</body>
+</html>

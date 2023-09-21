@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+       
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-image: url('https://img.franchiseindia.com/categories/industrial-fabrics-textile.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px; /* Increased the header height */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Added relative positioning to the header */
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 4;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+         @media screen and (max-width: 768px) {
+            .menu-icon {
+                display: block; /* Show the hamburger icon */
+            }
+
+            nav ul {
+                display: none; /* Hide the navigation menu items */
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            nav ul.active {
+                display: flex; /* Show the navigation menu items */
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            /* Rotate hamburger icon into a close icon when menu is active */
+            .menu-icon.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .menu-icon.active div:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-icon.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+        /* Style for the navigation menu */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  font-size: 1.5em;
+  margin: 0 10px; /* Reduced horizontal margin */
+  position: relative; /* Added relative positioning */
+}
+
+/* Style for the subfields in the menu */
+nav li ul {
+  z-index: 3;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  display: none;
+  width: max-content; /* Adjusted width for responsiveness */
+}
+
+nav li:hover ul {
+  z-index: 3;
+  display: block;
+}
+
+nav li ul li {
+  z-index: 3;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+/* Style for links in the menu */
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style for links in the subfields */
+nav li ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media query for smaller screens */
+
+    .roller{
+        z-index: -1;
+    display: flex;
+    }
+
+        /* Style for the image carousel */
+        .image-carousel {
+            z-index: -1;
+            width: 100%;
+            height: 400px; /* Fixed height of 400px */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-carousel img {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        /* Style for the next/previous buttons */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .next-button {
+            right: 10px;
+        }
+
+        .prev-button {
+            left: 10px;
+        }
+
+        /* Style for the status indicator */
+        .status {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Style for the news section */
+        .news-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .news-card {
+            width: calc(33.33% - 20px);
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .big-footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Style for the links in the big footer */
+        .big-footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .big-footer {
+                height: auto;
+                padding: 10px;
+            }
+
+            .big-footer a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <div class="menu-icon" onclick="toggleMenu()">
+
+    </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">TRACKING</a>
+                    <ul>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="#">Product 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MARKET PLACE</a>
+                    <ul>
+                        <li><a href="#">BUYER</a></li>
+                        <li><a href="#">SELLER</a></li>
+                        <li><a href="#">FARMER</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">EDUCATION</a>
+                    <ul>
+                        <li><a href="/workshop">WORKSHOP</a></li>
+                        <li><a href="/training">TRAINING</a></li>
+                        <li><a href="#">WIKI</a></li>
+                        <li><a href="#">TOOLS</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logistic">LOGISTICS SUPPORT</a></li>
+                <li><a href="#">VISUALIZATION</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+   </header>
+    <!-- Image Carousel -->
+    <div class="roller">
+        <div class="image-carousel">
+        
+        <img src="https://images.unsplash.com/photo-1486129273931-27820249c615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29vbCUyMGNhcm91c2VsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Image1">
+        <img src="https://images.unsplash.com/photo-1598871956222-26b66d6559fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdvb2wlMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1513890333407-6f85205e8ef2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHdvb2wlMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 3">
+        <img src="https://images.unsplash.com/photo-1575193506520-45ff0a377fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHdvb2wlMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 4">
+        <img src="https://images.unsplash.com/photo-1533382433768-3d403240fa40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHdvb2wlMjBmYWJyaWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image 5">
+    </div>
+    
+    </div>
+    <!-- Previous Button -->
+    <div class="carousel-button prev-button" onclick="prevImage()">&#10094;</div>
+    
+    <!-- Next Button -->
+    <div class="carousel-button next-button" onclick="nextImage()">&#10095;</div>
+    
+    <!-- Status Indicator -->
+    <div class="status">Image 1 of 5</div>
+
+    <!-- News Section -->
+    <div class="news-section">
+        <div class="news-card">
+            <h3>News Title 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero vitae orci condimentum aliquet.</p>
+        </div>
+        <div class="news-card">
+            <h3>News Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero vitae orci condimentum aliquet.</p>
+        </div>
+        <div class="news-card">
+            <h3>News Title 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero vitae orci condimentum aliquet.</p>
+        </div>
+    </div>
+    <footer class="big-footer">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookies</a>
+        <a href="#">Terms and Conditions</a>
+   </footer>
+
+    <script>
+            function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('nav ul');
+
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+        // JavaScript for image carousel
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-carousel img');
+        const status = document.querySelector('.status');
+
+        function updateStatus() {
+            status.textContent = `Image ${currentImageIndex + 1} of ${images.length}`;
+        }
+
+        function showImage(index) {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = index;
+            images[currentImageIndex].style.display = 'block';
+            updateStatus();
+        }
+
+        function nextImage() {
+            const nextIndex = (currentImageIndex + 1) % images.length;
+            showImage(nextIndex);
+        }
+
+        function prevImage() {
+            const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(prevIndex);
+        }
+
+        updateStatus(); // Initialize status
+        setInterval(nextImage, 2000); // Auto-rotate images every 2 seconds
+
+    </script>
+</body>
+</html>
