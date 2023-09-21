@@ -7,19 +7,35 @@ const ejs = require('ejs');
 const session = require('express-session');
 
 
-mongoose.connect('mongodb://localhost:27017/testApp',{useNewUrlParser:true})
+// mongoose.connect('mongodb://localhost:27017/testApp',{useNewUrlParser:true})
 
+// .then(()=>{
 
-.then(()=>{
+//     console.log('Mongo  connection open');
 
-    console.log('Mongo  connection open');
+// })
+// .catch(err=>{
+//     console.log('Oh no error !!');
+//     console.log(err);
 
-})
-.catch(err=>{
-    console.log('Oh no error !!');
-    console.log(err);
+// })
 
-})
+require('dotenv').config();
+const dbUrl =process.env.DB_URL
+console.log(dbUrl)
+
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+      console.log("MONGO CONNECTION OPEN!!!")
+  })
+  .catch(err => {
+      console.log("OH NO MONGO CONNECTION ERROR!!!!")
+      console.log(err)
+  })
+
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded({extended:true}));
